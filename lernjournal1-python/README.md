@@ -7,8 +7,8 @@
 
 | | Bitte ausfüllen |
 | -------- | ------- |
-| Repository (URL)  |
-| Kurze Beschreibung der App-Funktion | XXX |
+| Repository (URL) | XXX |
+| Kurze Beschreibung der App-Funktion | Web-App zur Extraktion relevanter Schlagwörter aus einem vom User eingegebenen Nachrichtentext |
 | Verwendete Library aus PyPi (Name) | flashtext |
 | Verwendete Library aus PyPi (URL) | https://pypi.org/project/flashtext/ |
 | Weitere Libraries | Flask, Bootstrap, JavaScript (Fetch API) |
