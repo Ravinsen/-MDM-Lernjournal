@@ -65,7 +65,7 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 - Region: South India
 - Laufzeit: Python 3.11 (Linux)
 
-<img src="[images/azure-app-overview.png](https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner-App_Azure.png?raw=true)" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
+<img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner-App_Azure.png?raw=true" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
 
 ---
 
