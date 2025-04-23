@@ -84,7 +84,8 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 
 Im lokalen Projektordner wurde das Repository initialisiert, mit Azure verknüpft und gepusht:
 
-`git init
+`az login
+git init
 git remote add azure https://tankkostenrechner-app.scm.azurewebsites.net/tankkostenrechner-app.git
 git add .
 git commit -m "Initial deploy"
