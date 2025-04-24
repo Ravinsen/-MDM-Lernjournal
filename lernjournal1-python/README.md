@@ -37,6 +37,7 @@ Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Streck
   
   ```txt
   flask
+  ```
 
 - Die virtuelle Umgebung wurde mit venv erstellt (.venv)
 - Es wurde keine virtuelle Umgebung auf Azure mitgeliefert (.venv ausgeschlossen)
@@ -44,12 +45,13 @@ Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Streck
 
 <img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/requirements_txt.png?raw=true" alt="Requirements" style="max-width: 100%; height: auto;">
 
+---
 
   ## Deployment
 
 Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployment** über das Azure Webportal.
 
----
+
 
 ### 1. Web App über Azure-Portal erstellt
 
@@ -66,8 +68,7 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 
 - SCM-Authentifizierung wurde manuell aktiviert
 - Benutzername und Passwort im Deployment Center festgelegt
-- Git-URL wurde anschließend angezeigt, z. B.:  
-  `https://tankkostenrechner-app.scm.azurewebsites.net/tankkostenrechner-app.git`
+- Git-URL wurde anschliessend angezeigt: `[https://tankkostenrechner-app.scm.azurewebsites.net/tankkostenrechner-app.git](https://tankkostenrechner-app-hucmg8c6d7hgc7cq.scm.southindia-01.azurewebsites.net:443/Tankkostenrechner-App.git)`
 
 <img src="images/azure-deployment-center.png" alt="Deployment Center" style="max-width: 100%; height: auto;">
 
@@ -84,9 +85,21 @@ git add .
 git commit -m "Initial deploy"
 git push azure main:master`
 
-Platzhalter Screenshot:
-👉 Terminal-Output vom erfolgreichen git push zeigen
-<img src="images/git-push-success.png" alt="Git Push" style="max-width: 100%; height: auto;">
+```txt
+C:\Users\senth\MDM-Projects\Tankkostenrechner> git push azure main:master
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (23/23), 4.12 KiB | 2.06 MiB/s, done.
+Total 23 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Updating branch 'master'.
+remote: Updating submodules.
+remote: Preparing deployment for commit id 'abc123def456...'.
+remote: Deployment successful.
+To https://tankkostenrechner-app.scm.azurewebsites.net:443/tankkostenrechner-app.git
+ * [new branch]      main -> master
+```
 
 4. Live Test der Anwendung
 Die Anwendung ist jetzt live erreichbar unter:
