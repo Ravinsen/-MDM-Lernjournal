@@ -100,6 +100,20 @@ remote: Deployment successful.
 To https://tankkostenrechner-app.scm.azurewebsites.net:443/tankkostenrechner-app.git
  * [new branch]      main -> master
 ```
+Der Protokollstream sieht nach erfolgreichen Deployment folgendermassen aus:
+```txt
+2025-04-24T07:56:19  Welcome, you are now connected to log-streaming service.Starting Log Tail -n 10 of existing logs ----/appsvctmp/volatile/logs/runtime/container.log
+2025-04-24T07:13:41.4400979Z [2025-04-24 07:13:41 +0000] [1036] [INFO] Booting worker with pid: 1036
+2025-04-24T07:13:43.4365033Z 169.254.129.1 - - [24/Apr/2025:07:13:43 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2025-04-24T07:13:44.2158327Z 169.254.129.1 - - [24/Apr/2025:07:13:44 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
+2025-04-24T07:13:44.6679295Z 169.254.129.1 - - [24/Apr/2025:07:13:44 +0000] "GET / HTTP/1.1" 200 0 "https://sandbox-1.reactblade.portal.azure.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"
+2025-04-24T07:13:44.8665974Z 169.254.129.1 - - [24/Apr/2025:07:13:44 +0000] "GET /script.js HTTP/1.1" 200 0 "https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"
+2025-04-24T07:13:45.4995148Z 169.254.129.1 - - [24/Apr/2025:07:13:45 +0000] "GET /favicon.ico HTTP/1.1" 404 207 "https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"
+2025-04-24T07:13:49.5416097Z 169.254.129.1 - - [24/Apr/2025:07:13:49 +0000] "GET / HTTP/1.1" 200 0 "-" "ReadyForRequest/1.0 (LocalCache)"
+2025-04-24T07:13:49.5500843Z 169.254.129.1 - - [24/Apr/2025:07:13:49 +0000] "GET / HTTP/1.1" 200 0 "-" "ReadyForRequest/1.0 (AppInit)"
+2025-04-24T07:16:51.5939080Z 169.254.129.1 - - [24/Apr/2025:07:16:51 +0000] "POST /calculate HTTP/1.1" 200 17 "https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"
+2025-04-24T07:56:14.6343140Z 169.254.129.1 - - [24/Apr/2025:07:56:13 +0000] "GET /admin/host/status HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36 Edg/135.0.0.0"Ending Log Tail of existing logs ---Starting Live Log Stream ---
+```
 
 ### 4. Live Test der Anwendung
 
