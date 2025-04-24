@@ -42,8 +42,6 @@ Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Streck
 - Es wurde keine virtuelle Umgebung auf Azure mitgeliefert (.venv ausgeschlossen)
 - Die requirements.txt wurde manuell gepflegt
 
-Platzhalter Screenshot:
-👉 Zeige hier dein geöffnetes requirements.txt File
 <img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/requirements_txt.png?raw=true" alt="Requirements" style="max-width: 100%; height: auto;">
 
 
