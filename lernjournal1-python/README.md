@@ -44,7 +44,7 @@ Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Streck
 
 Platzhalter Screenshot:
 👉 Zeige hier dein geöffnetes requirements.txt File
-<img src="" alt="Requirements" style="max-width: 100%; height: auto;">
+<img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/requirements_txt.png?raw=true" alt="Requirements" style="max-width: 100%; height: auto;">
 
 
   ## Deployment
