@@ -25,11 +25,7 @@ Die Webanwendung **Tankkostenrechner** erlaubt es, die geschätzten Kosten einer
 - Verbrauch in Litern pro 100 Kilometer
 - Benzinpreis pro Liter (CHF)
 
-Die App berechnet auf Knopfdruck die **gesamten Tankkosten** in CHF. Die einfache Logik wird mit Flask im Backend umgesetzt, das Frontend basiert auf HTML, Bootstrap und Vanilla JavaScript.
-
-**Formel:**
-Kosten = (Strecke / 100) × Verbrauch × Preis
-
+Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Strecke / 100) × Verbrauch × Preis). Die einfache Logik wird mit Flask im Backend umgesetzt, das Frontend basiert auf HTML, Bootstrap und Vanilla JavaScript.
 
 **Platzhalter Screenshot:**  
 👉 Zeige hier einen Screenshot deiner Web-App im Browser mit ausgefüllten Feldern und berechnetem Ergebnis  
@@ -64,6 +60,7 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 - App-Name: `tankkostenrechner-app`
 - Region: South India
 - Laufzeit: Python 3.11 (Linux)
+- Standarddomäne: tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net
 
 <img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner-App_Azure.png?raw=true" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
 
