@@ -26,8 +26,6 @@ Die Webanwendung **Tankkostenrechner** erlaubt es, die geschätzten Kosten einer
 - Benzinpreis pro Liter (CHF)
 
 Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Strecke / 100) × Verbrauch × Preis). Die einfache Logik wird mit Flask im Backend umgesetzt, das Frontend basiert auf HTML, Bootstrap und Vanilla JavaScript.
- 
-<img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner_Frontend.png?raw=true" alt="Web UI" style="max-width: 100%; height: auto;">
 
 ---
 
@@ -78,12 +76,14 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 
 Im lokalen Projektordner wurde das Repository initialisiert, mit Azure verknüpft und gepusht:
 
-`az login
+```bash
+az login
 git init
 git remote add azure https://tankkostenrechner-app.scm.azurewebsites.net/tankkostenrechner-app.git
 git add .
 git commit -m "Initial deploy"
-git push azure main:master`
+git push azure main:master
+```
 
 ```txt
 C:\Users\senth\MDM-Projects\Tankkostenrechner> git push azure main:master
@@ -101,13 +101,12 @@ To https://tankkostenrechner-app.scm.azurewebsites.net:443/tankkostenrechner-app
  * [new branch]      main -> master
 ```
 
-4. Live Test der Anwendung
-Die Anwendung ist jetzt live erreichbar unter:
-🔗 https://tankkostenrechner-app.azurewebsites.net
+### 4. Live Test der Anwendung
 
-Platzhalter Screenshot:
-👉 Zeige deine App live im Browser auf Azure
-<img src="images/live-app.png" alt="Live App" style="max-width: 100%; height: auto;">
+Die Anwendung ist live erreichbar unter:
+https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/
+
+<img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner_Frontend.png?raw=true" alt="Web UI" style="max-width: 100%; height: auto;">
 
 Fazit & Reflexion
 Die Umsetzung eines eigenen Tankkostenrechners war trotz geringer Komplexität sehr lehrreich. Ich konnte den vollständigen Prozess von der lokalen Flask-App bis zum Azure Deployment nachvollziehen und umsetzen.
