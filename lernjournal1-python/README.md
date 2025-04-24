@@ -102,6 +102,7 @@ To https://tankkostenrechner-app.scm.azurewebsites.net:443/tankkostenrechner-app
 ```
 Der Protokollstream sieht nach erfolgreichen Deployment folgendermassen aus:
 ```txt
+Verbunden!
 2025-04-24T07:56:19  Welcome, you are now connected to log-streaming service.Starting Log Tail -n 10 of existing logs ----/appsvctmp/volatile/logs/runtime/container.log
 2025-04-24T07:13:41.4400979Z [2025-04-24 07:13:41 +0000] [1036] [INFO] Booting worker with pid: 1036
 2025-04-24T07:13:43.4365033Z 169.254.129.1 - - [24/Apr/2025:07:13:43 +0000] "GET /robots933456.txt HTTP/1.1" 404 207 "-" "HealthCheck/1.0"
