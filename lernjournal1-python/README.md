@@ -26,27 +26,25 @@ Die Webanwendung **Tankkostenrechner** erlaubt es, die geschätzten Kosten einer
 - Benzinpreis pro Liter (CHF)
 
 Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Strecke / 100) × Verbrauch × Preis). Die einfache Logik wird mit Flask im Backend umgesetzt, das Frontend basiert auf HTML, Bootstrap und Vanilla JavaScript.
-
-**Platzhalter Screenshot:**  
-👉 Zeige hier einen Screenshot deiner Web-App im Browser mit ausgefüllten Feldern und berechnetem Ergebnis  
-`<img src="images/tankkosten-ui.png" alt="Web UI" style="max-width: 100%; height: auto;">`
+ 
+<img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner_Frontend.png?raw=true" alt="Web UI" style="max-width: 100%; height: auto;">
 
 ---
 
 ## Dependency Management
 
-- Verwendet wurde eine minimale `requirements.txt` mit nur einer Abhängigkeit:
+- Verwendet wurde eine minimale `requirements.txt` mit einer Abhängigkeit:
+  
   ```txt
   flask
 
-Die virtuelle Umgebung wurde mit venv erstellt (.venv)
-Es wurde keine virtuelle Umgebung auf Azure mitgeliefert (.venv ausgeschlossen)
-
-Die requirements.txt wurde manuell gepflegt
+- Die virtuelle Umgebung wurde mit venv erstellt (.venv)
+- Es wurde keine virtuelle Umgebung auf Azure mitgeliefert (.venv ausgeschlossen)
+- Die requirements.txt wurde manuell gepflegt
 
 Platzhalter Screenshot:
 👉 Zeige hier dein geöffnetes requirements.txt File
-<img src="images/requirements.png" alt="Requirements" style="max-width: 100%; height: auto;">
+<img src="" alt="Requirements" style="max-width: 100%; height: auto;">
 
 
   ## Deployment
