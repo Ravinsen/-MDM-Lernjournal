@@ -9,7 +9,7 @@
 
 | Bestandteil | Beschrieb, Fundort |
 |-------------|------------------------------------------------------------|
-| Repository (URL) | _Hier deine GitHub-URL einfügen (falls vorhanden)_ |
+| Repository (URL) | https://github.com/Ravinsen/Tankkostenrechner |
 | Kurze Beschreibung der App-Funktion | Berechnet die Tankkosten basierend auf Strecke, Verbrauch und Benzinpreis |
 | Verwendete Library aus PyPi (Name) | flask |
 | Verwendete Library aus PyPi (URL) | https://pypi.org/project/Flask/ |
