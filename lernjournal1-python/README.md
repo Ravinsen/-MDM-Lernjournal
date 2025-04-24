@@ -54,9 +54,9 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 ### 1. Web App über Azure-Portal erstellt
 
 - App-Name: `tankkostenrechner-app`
-- Region: South India
-- Laufzeit: Python 3.11 (Linux)
-- Standarddomäne: tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net
+- Region: `South India`
+- Laufzeit: `Python 3.11 (Linux)`
+- Standarddomäne: `tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net`
 
 <img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner-App_Azure.png?raw=true" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
 
@@ -108,5 +108,8 @@ https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/
 
 <img src="https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal1-python/images/Tankkostenrechner_Frontend.png?raw=true" alt="Web UI" style="max-width: 100%; height: auto;">
 
-Fazit & Reflexion
+---
+
+### Fazit & Reflexion
+
 Die Umsetzung eines eigenen Tankkostenrechners war trotz geringer Komplexität sehr lehrreich. Ich konnte den vollständigen Prozess von der lokalen Flask-App bis zum Azure Deployment nachvollziehen und umsetzen.
