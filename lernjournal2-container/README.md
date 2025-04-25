@@ -34,13 +34,17 @@ Um zu starten wurde folgender Befehlt im Terminal ausgeführt:
   ```
 <img src="images/DockerComposeCommand.png" alt="DockerComposeCommand" style="max-width: 100%; height: auto;">
 
-Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://localhost:8082) erreichbar. Nach der Registrierung konnte die Hauptseite geöffnet werden.
+Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://localhost:8082) erreichbar. Nach der Registrierung konnte die Hauptseite ebenfalls erfolgreich geöffnet werden.
 
 <img src="images/TraccarRegisterScreen.png" alt="TraccarRegisterScreen" style="max-width: 100%; height: auto;">
 
 <img src="images/TraccarMainScreen.png" alt="TraccarMainScreen" style="max-width: 100%; height: auto;">
 
-* [ ] TODO
+Nun zum Schluss kann die Applikation beendet und der Container entfernt werden.Dazu wird folgender Code ausgeführt:
+ ```txt
+  docker-compose down
+  ```
+
 
 ## Deployment ML-App
 
