@@ -36,6 +36,7 @@ Um zu starten wurde folgender Befehlt im Terminal ausgeführt:
 
 Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://localhost:8082) erreichbar. Nach der Registrierung konnte die Hauptseite geöffnet werden.
 
+<img src="images/TraccarRegister.png" alt="TraccarRegister" style="max-width: 100%; height: auto;">
 
 * [ ] TODO
 
