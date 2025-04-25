@@ -14,7 +14,10 @@
 
 ### Dokumentation manuelles Deployment
 
-* [ ] TODO
+Die Anwendung Traccar besteht aus zwei verbundenen Containern:  
+– Traccar-Webserver  
+– MySQL-Datenbank
+
 
 ### Dokumentation Docker-Compose Deployment
 
