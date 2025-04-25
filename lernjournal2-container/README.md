@@ -40,7 +40,7 @@ Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://local
 
 <img src="images/TraccarMainScreen.png" alt="TraccarMainScreen" style="max-width: 100%; height: auto;">
 
-Nun zum Schluss kann die Applikation beendet und der Container entfernt werden.Dazu wird folgender Code ausgeführt:
+Nun zum Schluss kann die Applikation beendet und der Container entfernt werden. Dazu wird folgender Code ausgeführt:
 
  ```txt
   docker-compose down
@@ -53,13 +53,14 @@ Nun zum Schluss kann die Applikation beendet und der Container entfernt werden.D
 
 | Gewähltes Beispiel | Bitte ausfüllen |
 | -------- | ------- |
-| onnx-sentiment-analysis | Ja/Nein |
-| onnx-image-classification | Ja/Nein |
-| Repo URL Fork | URL |
-| Docker Hub URL | URL |
+| onnx-sentiment-analysis | Nein |
+| onnx-image-classification | Ja|
+| Repo URL Fork | https://github.com/Ravinsen/onnx-image-classification |
+| Docker Hub URL | https://hub.docker.com/repository/docker/ravinsen/onnx-image-classification |
 
 ### Dokumentation lokales Deployment
 
+Für den zweiten Teil habe ich mich für die `onnx-image-classification` entschieden. Im zweiten Teil liegt der Schwerpunkt im Deployment einer Machine Learning App, welche von diesem Repository zu Verfügung gestellt wurde https://github.com/mosazhaw/onnx-image-classification
 * [ ] TODO
 
 ### Dokumentation Deployment Azure Web App
