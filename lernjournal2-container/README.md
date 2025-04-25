@@ -14,14 +14,18 @@
 
 ### Dokumentation manuelles Deployment
 
-Die Anwendung Traccar besteht aus zwei verbundenen Containern:  
+Ziel war es, eine bestehende Container-Web-Applikation mit mindestens zwei Containern zu recherchieren, manuell und via Docker Compose zu deployen. Ich habe mich für das Fahrzeug-Ortungssystem Traccar entschieden, da es eine moderne GPS-Tracking-Plattform ist und gut zum „Auto“-Thema passt.
+
+Die Anwendung Traccar besteht aus zwei verbundenen Containern:
+
 – Traccar-Webserver  
 – MySQL-Datenbank
 
 <img src="images/ZweiContainer.png" alt="Container" style="max-width: 100%; height: auto;">
 
-
 ### Dokumentation Docker-Compose Deployment
+
+Als erstes wurde das  <a href="lernjournal2-container/docker-compose.yml">docker-compose.yml</a> erstellt
 
 * [ ] TODO
 
