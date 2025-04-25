@@ -19,6 +19,7 @@ Die Anwendung Traccar besteht aus zwei verbundenen Containern:
 – MySQL-Datenbank
 
 
+
 ### Dokumentation Docker-Compose Deployment
 
 * [ ] TODO
