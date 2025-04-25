@@ -38,6 +38,8 @@ Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://local
 
 <img src="images/TraccarRegisterScreen.png" alt="TraccarRegisterScreen" style="max-width: 100%; height: auto;">
 
+<img src="images/TraccarMainScreen.png" alt="TraccarMainScreen" style="max-width: 100%; height: auto;">
+
 * [ ] TODO
 
 ## Deployment ML-App
