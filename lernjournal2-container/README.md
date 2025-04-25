@@ -10,7 +10,7 @@
 | Image 1 – URL Docker Hub | https://hub.docker.com/r/traccar/traccar |
 | Image 2 | mysql:5.7 |
 | Image 2 – URL Docker Hub | https://hub.docker.com/_/mysql |
-| Docker Compose | lokal erstellt, kein GitHub Repo |
+| Docker Compose | https://github.com/Ravinsen/-MDM-Lernjournal/blob/main/lernjournal2-container/docker-compose.yml |
 
 ### Dokumentation manuelles Deployment
 
