@@ -25,7 +25,7 @@ Die Anwendung Traccar besteht aus zwei verbundenen Containern:
 
 ### Dokumentation Docker-Compose Deployment
 
-Als erstes wurde das  <a href="lernjournal2-container/docker-compose.yml">docker-compose.yml</a> erstellt
+Als erstes wurde das  <a href="/docker-compose.yml">docker-compose.yml</a> erstellt
 
 * [ ] TODO
 
