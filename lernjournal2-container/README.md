@@ -32,7 +32,7 @@ Um zu starten wurde folgender Befehlt im Terminal ausgeführt:
  ```txt
   docker-compose up -d
   ```
-
+<img src="images/DockerComposeCommand.png" alt="DockerComposeCommand" style="max-width: 100%; height: auto;">
 
 * [ ] TODO
 
