@@ -41,10 +41,11 @@ Nach erfolgreichem Laden war die Traccar-Seite über den Localhost (http://local
 <img src="images/TraccarMainScreen.png" alt="TraccarMainScreen" style="max-width: 100%; height: auto;">
 
 Nun zum Schluss kann die Applikation beendet und der Container entfernt werden.Dazu wird folgender Code ausgeführt:
+
  ```txt
   docker-compose down
   ```
-
+<img src="images/DockerComposeDown.png" alt="DockerComposeDown" style="max-width: 100%; height: auto;">
 
 ## Deployment ML-App
 
