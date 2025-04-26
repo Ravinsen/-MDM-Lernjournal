@@ -64,19 +64,37 @@ Für den zweiten Teil habe ich mich für die `onnx-image-classification` entschi
 
 Danach wurde das Docker-Image für die onnx-image-classification-App lokal erstellt und geprüft, ob die Webanwendung funktioniert.
 
-1. Für das lokale Deployment wurde `docker build -t onnx-image-classification .` ausgeführt.
+1. Für das lokale Deployment wurde `docker build` ausgeführt.
+  ```txt
+  docker build -t onnx-image-classification .
+  ```
 
 <img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
 
-2. Danach wird der Container gestartet `docker run --name onnx-image-classification -p 9000:5000 -d onnx-image-classification`. 
+2. Danach wird der Container mit `docker run` gestartet.
+```txt
+docker run --name onnx-image-classification -p 9000:5000 -d onnx-image-classification`. 
+```
 
 <img src="images/dockerrun.png" alt="dockerrun" style="max-width: 100%; height: auto;">
 
-3. Nun ist das Modell über den Localhost http://localhost:9000 erreichbar.
+3. Und das Docker Image wurde erstellt, dies ist im Docker Desktop ersichtlich.
+
+<img src="images/dockerimage.png" alt="dockerimage" style="max-width: 100%; height: auto;"> 
+
+4. Nun ist das Modell über den Localhost `http://localhost:9000` erreichbar.
 
 <img src="images/onnxlocalhost.png" alt="onnxlocalhost" style="max-width: 100%; height: auto;">  
 
+5. Zum Schluss wird mit `docker login` Docker-Client auf Docker Hub authentifiziert, das Docker Image getaggt `docker tag` und das Image auf Docker Hub veröffentlicht `docker push`.
+```txt
+docker login
+docker tag onnx-image-classification ravinsen/onnx-image-classification:latest
+docker push ravinsen/onnx-image-classification:latest
+  ```
+<img src="images/dockerlogintagpush.png" alt="dockerlogintagpush" style="max-width: 100%; height: auto;">
 
+<img src="images/dockerhubimage.png" alt="dockerhubimage" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment Azure Web App
 
