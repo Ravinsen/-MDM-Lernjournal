@@ -64,9 +64,14 @@ Für den zweiten Teil habe ich mich für die `onnx-image-classification` entschi
 
 Danach wurde das Docker-Image für die onnx-image-classification-App lokal erstellt und geprüft, ob die Webanwendung funktioniert.
 
-Für das lokale Deployment wurde `docker build -t onnx-image-classification .` ausgeführt.
+1. Für das lokale Deployment wurde `docker build -t onnx-image-classification .` ausgeführt.
 
 <img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
+
+2. Danach wird der Container gestartet `docker run --name onnx-image-classification -p 9000:5000 -d onnx-image-classification`
+
+<img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
+
 
 ### Dokumentation Deployment Azure Web App
 
