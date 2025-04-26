@@ -138,8 +138,7 @@ az provider register -n Microsoft.OperationalInsights --wait
 az containerapp create --name lj2-onnx-aca --resource-group lj2-onnx-rg --environment lj2-onnx-env --image ravinsen/onnx-image-classification:latest --target-port 5000 --ingress external --query properties.configuration.ingress.fqdn
 ```
 
-<img src="images/onnxaca.png" alt="onnxaca" style="max-width: 100%; height: auto;">
-
+<img src="images/onnxaca_I.png" alt="onnxaca_I.png" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment ACI
 
