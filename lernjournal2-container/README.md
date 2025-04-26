@@ -116,13 +116,11 @@ az webapp create --resource-group lj2-onnx-rg --plan lj2-onnx-plan --name lj2-on
 
 <img src="images/azwebappcreate.png" alt="azwebappcreate" style="max-width: 100%; height: auto;">
 
-3. Nun wurden alle Resourcen erstellt und die App ist über Azure erreichbar lj2-onnx-app.azurewebsites.net.
+3. Nun wurden alle Resourcen erstellt und die App ist über Azure erreichbar https://lj2-onnx-app.azurewebsites.net/.
 
 <img src="images/azureappplan.png" alt="azureappplan" style="max-width: 100%; height: auto;">
 
 <img src="images/onnxwebapp.png" alt="onnxwebapp" style="max-width: 100%; height: auto;">
-
-
 
 ### Dokumentation Deployment ACA
 
