@@ -72,7 +72,7 @@ Danach wurde das Docker-Image für die onnx-image-classification-App lokal erste
 
 <img src="images/dockerrun.png" alt="dockerrun" style="max-width: 100%; height: auto;">
 
-3. Nun ist das Modell über den Localhost `http://localhost:9000`erreichbar.
+3. Nun ist das Modell über den Localhost http://localhost:9000 erreichbar.
 
 <img src="images/onnxlocalhost.png" alt="onnxlocalhost" style="max-width: 100%; height: auto;">  
 
