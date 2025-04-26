@@ -68,9 +68,14 @@ Danach wurde das Docker-Image für die onnx-image-classification-App lokal erste
 
 <img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
 
-2. Danach wird der Container gestartet `docker run --name onnx-image-classification -p 9000:5000 -d onnx-image-classification`
+2. Danach wird der Container gestartet `docker run --name onnx-image-classification -p 9000:5000 -d onnx-image-classification`. 
 
-<img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
+<img src="images/dockerrun.png" alt="dockerrun" style="max-width: 100%; height: auto;">
+
+3. Nun ist das Modell über den Localhost `http://localhost:9000`erreichbar.
+
+<img src="images/onnxlocalhost.png" alt="onnxlocalhost" style="max-width: 100%; height: auto;">  
+
 
 
 ### Dokumentation Deployment Azure Web App
