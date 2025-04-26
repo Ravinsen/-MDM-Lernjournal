@@ -100,12 +100,19 @@ docker push ravinsen/onnx-image-classification:latest
 
 Nach erfolgreichem lokalen Test wurde das Image in die Azure Cloud auf einen Azure App Service deployed. Ziel war es, die ML-App als skalierbare Web-App über eine öffentlich erreichbare URL verfügbar zu machen.
 
-1. Der erste Schritt ist die Erstellung einer Resourcengruppe mit `az group create`. Ich habe mich für das Aufsetzen für die CLI entschieden.
+1. Der erste Schritt ist die Erstellung einer Resourcengruppe mit `az group create`. Ich habe mich für das Aufsetzen mit CLI entschieden.
 ```txt
 az group create --name lj2-onnx-rg --location westeurope
+```
+
+<img src="images/azgroupcreate.png" alt="azgroupcreate" style="max-width: 100%; height: auto;">
+
+2. Nun wird die App Service Plan erstellt `az appservice plan create` und anschliessend die Web App mit dem Docker Hub Image erstellt `az webapp create`.
+```txt
+az appservice plan create --name lj2-onnx-plan --resource-group lj2-onnx-rg --sku F1 --is-linux
 az webapp create --resource-group lj2-onnx-rg --plan lj2-onnx-plan --name lj2-onnx-app --deployment-container-image-name ravinsen/onnx-image-classification:latest
 ```
-<img src="images/azgroupcreate.png" alt="azgroupcreate" style="max-width: 100%; height: auto;">
+<img src="images/azappserviceplancreate.png" alt="azappserviceplancreate" style="max-width: 100%; height: auto;">
 
 <img src="images/azwebappcreate.png" alt="azwebappcreate" style="max-width: 100%; height: auto;">
 
