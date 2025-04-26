@@ -124,7 +124,15 @@ az webapp create --resource-group lj2-onnx-rg --plan lj2-onnx-plan --name lj2-on
 
 ### Dokumentation Deployment ACA
 
-* [ ] TODO
+Nach erfolgreichem Test auf Azure App Service wurde die ML-App zusätzlich als Azure Container App (ACA) deployed, um eine containerisierte, dynamisch skalierbare Lösung zu testen. Für das Deployment wurde die Resourcengruppe `lj2-onnx-rg` verwendet.
+
+1. Um als Azure Container App zu deployeen muss eine Azure Container App Environment erstellt werden, der Befehl `az containerapp env create` hat nicht auf Anhieb funktioniert, da Azure Container Apps ein Log Analytics Workspace benötigt und der dafür zuständige Resource Provider in meiner Subscription noch nicht registriert war. Deshalb musste ich noch `az provider register` ausführen und den `az containerapp env create`-Befehlt nochmals laufen lassen.
+```txt
+az containerapp env create --name lj2-onnx-env --resource-group lj2-onnx-rg --location westeurope
+az provider register -n Microsoft.OperationalInsights --wait
+```
+<img src="images/azcontainerprovider.png" alt="azcontainerprovider.png" style="max-width: 100%; height: auto;">
+
 
 ### Dokumentation Deployment ACI
 
