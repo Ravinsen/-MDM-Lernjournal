@@ -60,9 +60,13 @@ Nun zum Schluss kann die Applikation beendet und der Container entfernt werden. 
 
 ### Dokumentation lokales Deployment
 
-Für den zweiten Teil habe ich mich für die `onnx-image-classification` entschieden. Im zweiten Teil liegt der Schwerpunkt im Deployment einer Machine Learning App, welche von diesem Repository zu Verfügung gestellt wurde https://github.com/mosazhaw/onnx-image-classification. Das Repository wurde wie geowhnt geforkt und geclont.
+Für den zweiten Teil habe ich mich für die `onnx-image-classification` entschieden. Im diesen Teil liegt der Schwerpunkt im Deployment einer Machine Learning App, welche von diesem Repository zu Verfügung gestellt wurde https://github.com/mosazhaw/onnx-image-classification. Das Repository wurde wie geowhnt geforkt und geclont.
 
 Danach wurde das Docker-Image für die onnx-image-classification-App lokal erstellt und geprüft, ob die Webanwendung funktioniert.
+
+Für das lokale Deployment wurde `docker build -t onnx-image-classification .` ausgeführt.
+
+<img src="images/dockerbuildpng.png" alt="dockerbuildpng" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment Azure Web App
 
