@@ -107,7 +107,7 @@ az webapp create --resource-group lj2-onnx-rg --plan lj2-onnx-plan --name lj2-on
 ```
 <img src="images/azgroupcreate.png" alt="azgroupcreate" style="max-width: 100%; height: auto;">
 
-<img src="images/azwebappcreate.png.png" alt="azwebappcreate" style="max-width: 100%; height: auto;">
+<img src="images/azwebappcreate.png" alt="azwebappcreate" style="max-width: 100%; height: auto;">
 
 
 ### Dokumentation Deployment ACA
