@@ -131,14 +131,15 @@ Nach erfolgreichem Test auf Azure App Service wurde die ML-App zusätzlich als A
 az containerapp env create --name lj2-onnx-env --resource-group lj2-onnx-rg --location westeurope
 az provider register -n Microsoft.OperationalInsights --wait
 ```
-<img src="images/azcontainerprovider.png" alt="azcontainerprovider.png" style="max-width: 100%; height: auto;">
+<img src="images/azcontainerprovider.png" alt="azcontainerprovider" style="max-width: 100%; height: auto;">
 
 2. Nun wird noch die ACA Container App erstellt `az containerapp create`. Nach der Erstellung ist die App erreichbar über diesen Link: https://lj2-onnx-aca.delightfulsand-6aa09a58.westeurope.azurecontainerapps.io/
 ```txt
 az containerapp create --name lj2-onnx-aca --resource-group lj2-onnx-rg --environment lj2-onnx-env --image ravinsen/onnx-image-classification:latest --target-port 5000 --ingress external --query properties.configuration.ingress.fqdn
 ```
+<img src="images/azcontainercreate.png" alt="azcontainercreate" style="max-width: 100%; height: auto;">
 
-<img src="images/onnxaca_I.png" alt="onnxaca_I.png" style="max-width: 100%; height: auto;">
+<img src="images/onnxaca_I.png" alt="onnxaca_I" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment ACI
 
