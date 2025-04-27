@@ -177,4 +177,15 @@ az acr credential show --name lj2onnxacr
 
 <img src="images/azacrcredentialshow.png" alt="azacrcredentialshow" style="max-width: 100%; height: auto;">
 
-2. 
+2. Mit Credentials kann nun den Container erstellt werden `az container create`. Der Container ist leider aus mir unerklärlichen Gründen nicht über DNS aufrufbar (auch nicht mit Port 80), er läuft aber über IP Port 5000 http://20.31.138.184:5000/.
+
+```txt
+az container create --resource-group lj2-onnx-rg --name lj2-onnx-aci --image lj2onnxacr.azurecr.io/onnx-image-classification:v1 --dns-name-label lj2onnxaciacr --ports 5000 --location westeurope --os-type Linux --cpu 1 --memory 1.5 --registry-login-server lj2onnxacr.azurecr.io --registry-username lj2onnxacr --registry-password PASSWORD
+```
+<img src="images/azcontainercreate_II.png" alt="azcontainercreate_II" style="max-width: 100%; height: auto;">
+
+<img src="images/azcontainershow.png" alt="azcontainershow" style="max-width: 100%; height: auto;">
+
+<img src="images/onnx-aci.png" alt="onnx-aci.png" style="max-width: 100%; height: auto;">
+
+   
