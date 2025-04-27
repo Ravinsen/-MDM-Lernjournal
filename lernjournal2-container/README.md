@@ -169,9 +169,12 @@ az acr credential show --name lj2onnxacr
 ```
 <img src="images/azacrcreate.png" alt="azacrcreate" style="max-width: 100%; height: auto;">
 
-<img src="images/azacrlogin.png" alt="azacrlogin" style="max-width: 80%; height: auto;">
+<img src="images/azacrlogin.png" alt="azacrlogin" style="max-width: 100%; height: auto;">
 
 <img src="images/acrdockertagpush.png" alt="acrdockertagpush" style="max-width: 100%; height: auto;">
 
 <img src="images/azacrupdate.png" alt="azacrupdate" style="max-width: 100%; height: auto;">
+
+<img src="images/azacrcredentialshow.png" alt="azacrcredentialshow" style="max-width: 100%; height: auto;">
+
 2. 
