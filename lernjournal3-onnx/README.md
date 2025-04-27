@@ -21,7 +21,7 @@ Das Modell verarbeitet Eingabebilder in einer Größe von 224x224 Pixeln mit dre
 
 Trotz der reduzierten Modellgröße durch INT8-Quantisierung erreicht das Modell gute Erkennungsraten, was sich auch in den eigenen Tests widerspiegelt. Insgesamt zeigt die Analyse eine typische Architektur für effiziente Modelle wie MobileNet oder EfficientNet, bei denen ein ausgewogenes Verhältnis zwischen Genauigkeit und Ressourcenverbrauch im Vordergrund steht.
 
-<img src="images/Netron_Analyse_efficientnet-lite4-11-int8.onnx.png" alt="Netron_Analyse_efficientnet-lite4-11-int8.onnx.png" style="max-width: 100%; height: auto;">
+<img src="images/Netron_Analyse_efficientnet-lite4-11-int8.onnx.png" link="Netron_Analyse_efficientnet-lite4-11-int8.onnx.png" style="max-width: 100%; height: auto;">
 
 * [ ] TODO
 
