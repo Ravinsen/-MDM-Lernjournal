@@ -143,4 +143,33 @@ az containerapp create --name lj2-onnx-aca --resource-group lj2-onnx-rg --enviro
 
 ### Dokumentation Deployment ACI
 
-* [ ] TODO
+Ziel war es, das ML-Modell als einzelne Azure Container Instance (ACI) bereitzustellen. Anfangs sollte das Image direkt von Docker Hub geladen werden, was jedoch aufgrund Verbindungsproblemen scheiterte. Deshalb wurde alternativ ein Azure Container Registry (ACR) aufgebaut und genutzt.
+
+1. Ursprünglicher Ansatz: Deployment mit Docker Hub. Versuch eines direkten Deployment von Dock Hub mit `az container create`. Leider ist dies gescheitert, da keine Verbindung zwischen Azure und Docker Hub hergestellt werden konnte.
+```txt
+az container create --resource-group lj2-onnx-rg --name lj2-onnx-aci --image ravinsen/onnx-image-classification:latest --dns-name-label lj2onnxaci --ports 5000 --location westeurope --os-type Linux --cpu 1 --memory 1.5
+```
+<img src="images/az container create.png" alt="az container create" style="max-width: 100%; height: auto;">
+
+2. Da das Docker-Image in einer privaten Azure Container Registry (ACR) gespeichert war, mussten beim Deployment auf Azure Container Instance (ACI) zusätzliche Registry-Zugangsdaten (--registry-login-server, --registry-username, --registry-password) angegeben werden, um das Image erfolgreich zu ziehen. Dafür musste nacheinander folgende Befehle ausgefärt werden:
+   - `az acr create` -> Erstellt die Azure Container Registry
+   - `az acr login` -> In ACR einloggen
+   - `docker tag` -> Docker-Image taggen
+   - `docker push` -> Docker-Image pushen
+   - `az acr update` -> Admin-Login aktivieren
+   - `az acr credential show` -> Zeigt die Zugangsdaten an, die für --registry-username und --registry-password nötig sind
+
+ ```txt
+az acr create --resource-group lj2-onnx-rg --name lj2onnxacr --sku Basic --location westeurope
+az acr login --name lj2onnxacr
+docker tag ravinsen/onnx-image-classification:latest lj2onnxacr.azurecr.io/onnx-image-classification:v1
+docker push lj2onnxacr.azurecr.io/onnx-image-classification:v1
+az acr update -n lj2onnxacr --admin-enabled true
+az acr credential show --name lj2onnxacr
+```
+<img src="images/azacrcreate.png" alt="azacrcreate" style="max-width: 100%; height: auto;">
+
+<img src="images/azacrlogin.png" alt="azacrlogin" style="max-width: 100%; height: auto;">
+
+<img src="images/acrdockertagpush.png" alt="acrdockertagpush" style="max-width: 100%; height: auto;">
+2. 
