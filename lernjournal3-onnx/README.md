@@ -21,6 +21,7 @@ Das Modell verarbeitet Eingabebilder in einer Größe von 224x224 Pixeln mit dre
 
 Trotz der reduzierten Modellgröße durch INT8-Quantisierung erreicht das Modell gute Erkennungsraten, was sich auch in den eigenen Tests widerspiegelt. Insgesamt zeigt die Analyse eine typische Architektur für effiziente Modelle wie MobileNet oder EfficientNet, bei denen ein ausgewogenes Verhältnis zwischen Genauigkeit und Ressourcenverbrauch im Vordergrund steht.
 
+<img src="images/TraccarRegisterScreen.png" alt="TraccarRegisterScreen" style="max-width: 100%; height: auto;">
 
 * [ ] TODO
 
