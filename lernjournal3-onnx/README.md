@@ -59,6 +59,7 @@ EfficientNet-Lite4-11-int8
 <img src="images/Statue_EfficientNet-Lite4-11-int8.png" alt="Statue_EfficientNet-Lite4-11-int8" style="max-width: 100%; height: auto;">
 
 EfficientNet-Lite4-11
+
 <img src="images/Statue_EfficientNet-Lite4-11.png" alt="Statue_EfficientNet-Lite4-11" style="max-width: 100%; height: auto;">
 
 EfficientNet-Lite4-11-int8
