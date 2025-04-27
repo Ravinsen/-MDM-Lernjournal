@@ -17,6 +17,9 @@ Gewählt wurde das Modell EfficientNet-Lite4-11-int8 aus dem ONNX Model Zoo. Es 
 
 ## Netron Analyse des EfficientNet-Lite4-11-int8 Modells
 
+Das Modell verarbeitet Eingabebilder in einer Größe von 224x224 Pixeln mit drei Farbkanälen (RGB). Es besteht aus mehreren aufeinanderfolgenden Bausteinen, die typische Schritte der Bilderkennung übernehmen: Merkmale werden zuerst extrahiert, anschliessend normalisiert und durch Aktivierungsfunktionen verstärkt. Am Ende des Modells wird das Bild auf eine kompakte Form reduziert, bevor eine Zuordnung zu einer von 1000 möglichen Klassen erfolgt. Die Ausgabe ist eine Wahrscheinlichkeitsverteilung über diese Klassen.
+
+Trotz der reduzierten Modellgröße durch INT8-Quantisierung erreicht das Modell gute Erkennungsraten, was sich auch in den eigenen Tests widerspiegelt. Insgesamt zeigt die Analyse eine typische Architektur für effiziente Modelle wie MobileNet oder EfficientNet, bei denen ein ausgewogenes Verhältnis zwischen Genauigkeit und Ressourcenverbrauch im Vordergrund steht.
 
 
 * [ ] TODO
