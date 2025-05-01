@@ -48,7 +48,7 @@ Insgesamt wurden drei verschiedene Bilder ausgewählt und jeweils mit beiden Mod
 
 EfficientNet-Lite4-11-int8
 
-<img src="images/Modeltraining.png" alt="Modeltraining" style="max-width: 100%; height: auto;">
+<img src="images/Auto_EfficientNet-Lite4-11-int8.png" alt="Auto_EfficientNet-Lite4-11-int8" style="max-width: 100%; height: auto;">
 
 EfficientNet-Lite4-11
 
