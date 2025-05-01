@@ -39,6 +39,15 @@ Die Bilder liegen im JPG-Format vor und wurden lokal in passende Ordnerstrukture
 ### Training
 
 Ein separates Repository wurde erstellt, um das Modell unabhängig zu trainieren https://github.com/Ravinsen/weather_training . Die Umgebung bestand aus einem klassischen PyTorch Setup mit Jupyter Notebooks.
+
+Folgende Pakete wurden verwendet:
+
+```txt
+pip install torch torchvision torchaudio
+pip install matplotlib scikit-learn pandas tqdm onnx
+pip install notebook
+```
+
 Das Modell basiert auf ResNet18 und wurde mit PyTorch mittels Transfer Learning angepasst.
 Die Trainingsumgebung bestand aus:
 
