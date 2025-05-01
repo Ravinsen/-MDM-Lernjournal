@@ -57,7 +57,7 @@ Die Trainingsumgebung bestand aus:
 - 8 Klassen
 - Fine-Tuning von resnet18 auf 5 Epochen
 - Verwendung von CrossEntropyLoss und Adam-Optimizer
-- Accuracy nach 5 Epochen: ca. 87 %
+- Accuracy nach 5 Epochen: ca. 86 %
 
 <img src="images/Modeltraining_I.png" alt="Modeltraining_I.png" style="max-width: 100%; height: auto;">
 
@@ -82,8 +82,35 @@ Criteria<Image, Classifications> criteria = Criteria.builder()
 ```
 Das synset-File (synset.txt) enthält die Klassennamen:
 
-
+```txt
+cloudy
+hail
+lightning
+rainbow
+rainy
+snowy
+sunny
+sunrise
+```
 
 ### Deployment
 
-* [ ] TODO
+Nach erfolgreichem lokalem Test wurde die Anwendung containerisiert und via Docker Hub in die Azure Cloud deployed.
+
+```txt
+docker build -t weather-classifier .
+docker run -p 8080:8080 weather-classifier
+```
+
+<img src="images/dockerbuild.png" alt="dockerbuild" style="max-width: 100%; height: auto;">
+<img src="images/dockerrun.png" alt="images/dockerrun.png" style="max-width: 100%; height: auto;">
+
+Nun kurz prüfen
+
+```txt
+docker tag weather-classifier ravinsen/weather-classifier:latest
+docker push ravinsen/weather-classifier:latest
+```
+
+
+
