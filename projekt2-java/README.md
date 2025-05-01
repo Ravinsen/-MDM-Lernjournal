@@ -36,11 +36,13 @@ Die Bilder liegen im JPG-Format vor und wurden lokal in passende Ordnerstrukture
 
 <img src="images/Weather_Training_Folder.png" alt="Weather_Training_Folder" style="max-width: 100%; height: auto;">
 
+Jede Klasse enthält zwischen 50–250 Bilder. Dadurch konnte ein relativ ausgewogenes Modell trainiert werden.
+
 ### Training
 
-Ein separates Repository wurde erstellt, um das Modell unabhängig zu trainieren https://github.com/Ravinsen/weather_training . Die Umgebung bestand aus einem klassischen PyTorch Setup mit Jupyter Notebooks.
+Das Training des Modells erfolgte in einem separaten Python-Repository mit PyTorch - https://github.com/Ravinsen/weather_training und wurde durch eine minimalistische Trainingsumgebung realisiert. Das Ziel war es ein robustes, fehlerfreies Modell für den späteren Java-Einsatz zu erstellen.
 
-Folgende Pakete wurden verwendet:
+Die Umgebung wurde mit folgenden Paketen konfiguriert:
 
 ```txt
 pip install torch torchvision torchaudio
@@ -49,6 +51,7 @@ pip install notebook
 ```
 
 Das Modell basiert auf ResNet18 und wurde mit PyTorch mittels Transfer Learning angepasst.
+
 Die Trainingsumgebung bestand aus:
 
 - 8 Klassen
@@ -56,9 +59,9 @@ Die Trainingsumgebung bestand aus:
 - Verwendung von CrossEntropyLoss und Adam-Optimizer
 - Accuracy nach 5 Epochen: ca. 87 %
 
-<img src="images/Modeltraining.png" alt="Modeltraining.png" style="max-width: 100%; height: auto;">
+<img src="images/Modeltraining_I.png" alt="Modeltraining_I.png" style="max-width: 100%; height: auto;">
 
-Das trainierte Modell wurde anschliessend als .onnx Datei exportiert und in ein Spring Boot Backend mit DJL integriert.
+Nach dem Training wurde das Modell mithilfe von `torch.onnx.export(...)` in das ONNX-Format überführt, um es später mit DJL in Java nutzen zu können.
 
 <img src="images/Export_Onnx.png" alt="Export_Onnx" style="max-width: 100%; height: auto;">
 
@@ -66,7 +69,20 @@ Das trainierte Modell wurde anschliessend als .onnx Datei exportiert und in ein 
 
 ### Inference / Serving
 
-* [ ] TODO
+Die Inferenz findet in einer Spring Boot Anwendung statt, die mithilfe von DJL (Deep Java Library) das ONNX-Modell lädt und verarbeitet.
+
+Beim Start wird das Modell geladen und ein `Predictor<Image, Classifications>` erzeugt. Dabei wird die ONNX Engine verwendet und der `ImageClassificationTranslator` entsprechend konfiguriert.
+
+```txt
+Criteria<Image, Classifications> criteria = Criteria.builder()
+    .optModelPath(Paths.get("src/main/resources/models/weather_classifier.onnx"))
+    .optTranslator(translator)
+    .optEngine("OnnxRuntime")
+    .build();
+```
+Das synset-File (synset.txt) enthält die Klassennamen:
+
+
 
 ### Deployment
 
