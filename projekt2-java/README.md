@@ -105,19 +105,21 @@ docker run -p 8080:8080 weather-classifier
 <img src="images/dockerbuild.png" alt="dockerbuild" style="max-width: 100%; height: auto;">
 <img src="images/dockerrun.png" alt="images/dockerrun.png" style="max-width: 100%; height: auto;">
 
-Docker Container ist nun erstellt und App ist über Localhost Port 8080 erreichbar `http://localhost:8080/`.
+Der Container läuft lokal und ist über `http://localhost:8080` erreichbar:
 
 <img src="images/dockercontainer.png" alt="dockercontainer" style="max-width: 100%; height: auto;">
 
 <img src="images/localhost.png" alt="localhost.png" style="max-width: 100%; height: auto;">
 
-Hat funktioniert, nun 
-
+Das Image wurde anschliessend mit Tag versehen und in das eigene Docker-Hub-Repository gepusht:
 
 ```txt
+docker login
 docker tag weather-classifier ravinsen/weather-classifier:latest
 docker push ravinsen/weather-classifier:latest
 ```
+<img src="images/dockerlogin.png" alt="dockerlogin" style="max-width: 100%; height: auto;">
 
+<img src="images/dockerpush.png" alt="dockerpush" style="max-width: 100%; height: auto;">
 
 
