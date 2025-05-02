@@ -40,7 +40,7 @@ Jede Klasse enthält zwischen 50–250 Bilder. Dadurch konnte ein relativ ausgew
 
 ### Training
 
-Das Training des Modells erfolgte in einem separaten Python-Repository mit PyTorch - https://github.com/Ravinsen/weather_training und wurde durch eine minimalistische Trainingsumgebung realisiert. Das Ziel war es ein robustes, fehlerfreies Modell für den späteren Java-Einsatz zu erstellen.
+Das Training des Bildklassifikationsmodells wurde in einem separaten Python-Repository mit PyTorch durchgeführt - https://github.com/Ravinsen/weather_training. Ziel war es, ein robustes und für die DJL-Inferenz geeignetes Modell zu erstellen, das zuverlässig zwischen acht verschiedenen Wetterklassen unterscheiden kann.
 
 Die Umgebung wurde mit folgenden Paketen konfiguriert:
 
@@ -91,6 +91,29 @@ rainy
 snowy
 sunny
 sunrise
+```
+
+### UI/Frontend
+
+Die Anwendung verfügt über ein minimalistisches, aber modernes Web-Interface zur Bildklassifikation. Nutzer können per Datei-Upload oder Drag-and-Drop ein Bild hochladen. Das Ergebnis wird direkt im Frontend als Emoji + Label + Confidence-Wert angezeigt.
+
+Funktionen des Frontends:
+
+- Responsive Layout mit HTML5, CSS und JavaScript
+- Drag & Drop Upload
+- Direkte Ergebnisanzeige im JSON-Format (z. B. "weather": "☁️ Cloudy", "confidence": "0.93")
+- Modernes, englischsprachiges Interface
+- Eingebunden als index.html unter src/main/resources/static/
+
+<img src="images/frontend.png" alt="frontend" style="max-width: 100%; height: auto;">
+
+Beispiel-Ergebnis im Browser:
+
+```txt
+{
+  "weather": "☀️ Sunny",
+  "confidence": "0.97"
+}
 ```
 
 ### Deployment
