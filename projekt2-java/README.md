@@ -105,7 +105,16 @@ docker run -p 8080:8080 weather-classifier
 <img src="images/dockerbuild.png" alt="dockerbuild" style="max-width: 100%; height: auto;">
 <img src="images/dockerrun.png" alt="images/dockerrun.png" style="max-width: 100%; height: auto;">
 
-Nun kurz prüfen
+Docker Container ist nun erstellt und App ist über Localhost Port 8080 erreichbar `http://localhost:8080/`.
+
+<img src="images/dockercontainer" alt="dockercontainer" style="max-width: 100%; height: auto;">
+
+Nun kurz prüfen, ob Localhost auch wirklich startet `http://localhost:8080/`.
+
+<img src="images/localhost" alt="localhost.png" style="max-width: 100%; height: auto;">
+
+Hat funktioniert, nun 
+
 
 ```txt
 docker tag weather-classifier ravinsen/weather-classifier:latest
