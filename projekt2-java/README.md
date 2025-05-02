@@ -107,15 +107,6 @@ Funktionen des Frontends:
 
 <img src="images/frontend.png" alt="frontend" style="max-width: 100%; height: auto;">
 
-Beispiel-Ergebnis im Browser:
-
-```txt
-{
-  "weather": "☀️ Sunny",
-  "confidence": "0.97"
-}
-```
-
 ### Deployment
 
 Nach erfolgreichem lokalem Test wurde die Anwendung containerisiert und via Docker Hub in die Azure Cloud deployed.
