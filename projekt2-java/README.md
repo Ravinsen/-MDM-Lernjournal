@@ -120,6 +120,6 @@ docker push ravinsen/weather-classifier:latest
 ```
 <img src="images/dockerlogin.png" alt="dockerlogin" style="max-width: 100%; height: auto;">
 
-<img src="images/dockerpushtag.png" alt="dockerpushtag" style="max-width: 100%; height: auto;">
+<img src="images/dockertagpush.png" alt="dockertagpush" style="max-width: 100%; height: auto;">
 
 
