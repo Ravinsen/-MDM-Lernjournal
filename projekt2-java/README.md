@@ -12,10 +12,17 @@
 | Repo URL | https://github.com/Ravinsen/WeatherClassifier |
 
 
-
 ## Dokumentation
 
+### Einleitung
+
+Im Rahmen von Projekt 2 wurde eine vollständige ML-gestützte Java-Webanwendung zur Klassifikation von Wetterbildern entwickelt.
+Ziel war es, ein eigenes Bildklassifikationsmodell mit PyTorch zu trainieren, in das ONNX-Format zu exportieren und anschliessend mit DJL (Deep Java Library) in eine moderne Spring Boot Web-App zu integrieren.
+
+Die Anwendung erkennt anhand von Bildern acht verschiedene Wetterzustände. Das Projekt deckt den gesamten ML-Lebenszyklus ab: Datensammlung, Training, Deployment, sowie eine benutzerfreundliche Web-Oberfläche mit Docker- und Azure-Deployment.
+
 ### Daten
+
 Für das Projekt wurden zwei öffentlich verfügbare Datensätze von Kaggle kombiniert, um die Klassifikation von Wetterbildern zu ermöglichen.
 
 Dataset 1 - https://www.kaggle.com/datasets/somesh24/multiclass-images-for-weather-classification?select=dataset2 - enthält die Klassen:
