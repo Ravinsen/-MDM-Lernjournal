@@ -111,15 +111,31 @@ Der Container läuft lokal und ist über `http://localhost:8080` erreichbar:
 
 <img src="images/localhost.png" alt="localhost.png" style="max-width: 100%; height: auto;">
 
-Das Image wurde anschliessend mit Tag versehen und in das eigene Docker-Hub-Repository gepusht:
+Das Image wurde anschliessend mit Tag versehen und in das eigene Docker-Hub-Repository gepusht `https://hub.docker.com/r/ravinsen/weather-classifier`:
 
 ```txt
 docker login
 docker tag weather-classifier ravinsen/weather-classifier:latest
 docker push ravinsen/weather-classifier:latest
 ```
-<img src="images/dockerlogin.png" alt="dockerlogin" style="max-width: 100%; height: auto;">
 
 <img src="images/dockertagpush.png" alt="dockertagpush" style="max-width: 100%; height: auto;">
 
+<img src="images/dockerhub.png" alt="dockerhub" style="max-width: 100%; height: auto;">
 
+Danach wurde die Anwendung in einem Linux App Service auf Azure deployed. Die Anwendung ist jetzt öffentlich über Azure erreichbar: https://weather-djl-app.azurewebsites.net/
+Die Befehle wurden mit der Azure CLI ausgeführt:
+
+```txt
+az login
+az group create --name weather-rg --location southindia
+az appservice plan create --name weather-plan --resource-group weather-rg --sku F1 --is-linux
+az webapp create --resource-group weather-rg --plan weather-plan --name weather-djl-app --deployment-container-image-name ravinsen/weather-classifier:latest
+```
+<img src="images/azlogin.png" alt="azlogin" style="max-width: 100%; height: auto;">
+
+<img src="images/azgroupcreate.png" alt="azgroupcreate" style="max-width: 100%; height: auto;">
+
+<img src="images/azappserviceplancreate.png" alt="azappserviceplancreate" style="max-width: 100%; height: auto;">
+
+<img src="images/azwebappcreate.png" alt="azwebappcreate" style="max-width: 100%; height: auto;">
