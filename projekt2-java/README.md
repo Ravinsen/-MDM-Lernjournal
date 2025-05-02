@@ -124,6 +124,8 @@ docker push ravinsen/weather-classifier:latest
 <img src="images/dockerhub.png" alt="dockerhub" style="max-width: 100%; height: auto;">
 
 Danach wurde die Anwendung in einem Linux App Service auf Azure deployed. Die Anwendung ist jetzt öffentlich über Azure erreichbar: https://weather-djl-app.azurewebsites.net/
+
+
 Die Befehle wurden mit der Azure CLI ausgeführt:
 
 ```txt
