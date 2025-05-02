@@ -109,9 +109,7 @@ Docker Container ist nun erstellt und App ist über Localhost Port 8080 erreichb
 
 <img src="images/dockercontainer.png" alt="dockercontainer" style="max-width: 100%; height: auto;">
 
-Nun kurz prüfen, ob Localhost auch wirklich startet `http://localhost:8080/`.
-
-<img src="images/localhost" alt="localhost.png" style="max-width: 100%; height: auto;">
+<img src="images/localhost.png" alt="localhost.png" style="max-width: 100%; height: auto;">
 
 Hat funktioniert, nun 
 
