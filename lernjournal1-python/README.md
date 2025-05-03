@@ -68,7 +68,7 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 - Benutzername und Passwort im Deployment Center festgelegt
 - Git-URL wurde anschliessend angezeigt: `https://tankkostenrechner-app-hucmg8c6d7hgc7cq.scm.southindia-01.azurewebsites.net:443/Tankkostenrechner-App.git`
 
-<img src="https://github.com/user-attachments/assets/86e44c13-29be-4ea1-bd2f-659898ebb660" style="max-width: 100%; height: auto;">
+<img src="images/Deploymentcenter_Azure.png" style="max-width: 100%; height: auto;">
 
 ---
 
