@@ -31,20 +31,25 @@ python data/main.py
 ```
 
 Die API-URL für jede Stadt sieht so aus:
-```url = https://creativecommons.tankerkoenig.de/json/list.php?lat={lat}&lng={lng}&rad=25&sort=dist&type=all&apikey={api_key}"```
+
+```txt
+url = https://creativecommons.tankerkoenig.de/json/list.php?lat={lat}&lng={lng}&rad=25&sort=dist&type=all&apikey={api_key}"
+```
 
 ---
 ## Training
 
-Das Modell ist in forecast_model.py implementiert. Es wird keine zentrale Trainingspipeline verwendet – stattdessen wird pro Anfrage eine Vorhersage in Echtzeit erzeugt, basierend auf historischen Daten der letzten 60 Tage.
+Das Modell ist in `forecast_model.py` implementiert. Es wird keine zentrale Trainingspipeline verwendet – stattdessen wird pro Anfrage eine Vorhersage in Echtzeit erzeugt, basierend auf historischen Daten der letzten 60 Tage.
 
 Für jede Tankstelle wird dabei eine lineare Regression mit Scikit-Learn durchgeführt. Die Features sind der Zeitstempel (umgewandelt in "Tage seit Beginn") und die Zielgröße ist der Kraftstoffpreis.
 
-```model = LinearRegression().fit(X, y)```
+```txt
+model = LinearRegression().fit(X, y)
+```
 
 Die Prognose deckt 5 zukünftige Tage ab. Zusätzlich wird eine Empfehlung gegeben, ob heute oder ein späterer Tag günstiger ist.
 
-```
+```txt
 # Beispielhafte Funktion
 predict_prices(df, kraftstoff="e5")
 ```
@@ -52,15 +57,16 @@ predict_prices(df, kraftstoff="e5")
 ---
 ## ModelOps Automation
 
-Die App aktualisiert sich automatisch täglich über GitHub Actions. Die Workflow-Datei update_data.yml liegt unter .github/workflows.
+Die App aktualisiert sich automatisch täglich über GitHub Actions. Die Workflow-Datei `update_data.yml` liegt unter `.github/workflows`.
 
 Der CRON-Zeitplan ist so konfiguriert, dass täglich um 04:00 Uhr UTC neue Daten geladen werden:
 
-```
+```txt
 on:
   schedule:
     - cron: '0 4 * * *'
 ```
+
 **Wichtige Schritte im Workflow:**
 
 - Installieren der Abhängigkeiten
