@@ -34,6 +34,6 @@ Bitte Anzahl Unterkapitel entsprechend der Gruppengrösse anpassen. Der eigene S
 |       | Bitte ausfüllen |
 |-------|-----------------|
 | Review durch (ZHAW-Kürzel) | ravinsen |
-| Review von (ZHAW-Kürzel) |            |
-| Sprache, Kommunikation, roter Faden | TODO |
-| Nachvollziehbarkeit Inhalt, Demonstration | TODO |
+| Review von (ZHAW-Kürzel) | selimdri |
+| Sprache, Kommunikation, roter Faden | Die Präsentation ist verständlich und frei gesprochen, mit einem sachlichen und authentischen Ton. Die einzelnen Komponenten – Datenquelle, Datenverarbeitung, Modellierung, Deployment – werden in einer sinnvollen Reihenfolge vorgestellt. Durch die natürliche Erzählweise entsteht ein erkennbarer roter Faden. |
+| Nachvollziehbarkeit Inhalt, Demonstration | Die Präsentation bietet einen guten Einblick in alle wesentlichen Teile des Projekts. Die Datenquelle (Transport API), das Ziel (Verspätungsvorhersage), das Modell (lineare Regression), sowie das Preprocessing (Umrechnung von Zeitangaben, Encoding) werden transparent erläutert. Die technische Umsetzung mit MongoDB, Docker und Flask wird in der Demo gut veranschaulicht. Zwar funktioniert der GitHub Actions Workflow nicht vollständig, dennoch werden sowohl der lokale Containerbetrieb als auch die Azure-Einbindung nachvollziehbar gezeigt. Die UI-Demo mit konkretem Beispiel rundet die Präsentation gelungen ab. |
