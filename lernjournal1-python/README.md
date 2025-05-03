@@ -41,7 +41,7 @@ Die App berechnet auf Knopfdruck die Tankkosten in CHF (Formel: Kosten = (Streck
 - Es wurde keine virtuelle Umgebung auf Azure mitgeliefert (.venv ausgeschlossen)
 - Die requirements.txt wurde manuell gepflegt
 
-<img src="images/requirements_txt.png?raw=true" alt="Requirements" style="max-width: 100%; height: auto;">
+<img src="images/requirements_txt.png" alt="Requirements" style="max-width: 100%; height: auto;">
 
 ---
 
@@ -58,7 +58,7 @@ Das Deployment erfolgte über **Azure Web App Service** mit **Local Git Deployme
 - Laufzeit: `Python 3.11 (Linux)`
 - Standarddomäne: `tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net`
 
-<img src="images/Tankkostenrechner-App_Azure.png?raw=true" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
+<img src="images/Tankkostenrechner-App_Azure.png" alt="Azure App Übersicht" style="max-width: 100%; height: auto;">
 
 ---
 
@@ -121,7 +121,7 @@ Verbunden!
 Die Anwendung ist live erreichbar unter:
 https://tankkostenrechner-app-hucmg8c6d7hgc7cq.southindia-01.azurewebsites.net/
 
-<img src="images/Tankkostenrechner_Frontend.png?raw=true" alt="Web UI" style="max-width: 100%; height: auto;">
+<img src="images/Tankkostenrechner_Frontend.png" alt="Web UI" style="max-width: 100%; height: auto;">
 
 ---
 
