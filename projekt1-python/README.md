@@ -143,16 +143,6 @@ cron: '0 4 * * *'
 <img src="images/githubactions.png" alt="githubactions" style="max-width: 100%; height: auto;">
 <img src="images/githubactionsI.png" alt="githubactionsI" style="max-width: 100%; height: auto;">
 
-**Wichtige Schritte im Workflow:**
-
-- Installieren der Abhängigkeiten
-
-- Laden der Secrets (MongoDB URI, API Key)
-
-- Ausführung von main.py
-
----
-
 ## Deployment
 
 Die App wurde vollständig containerisiert mit Docker und auf Azure App Service for Containers deployed.
