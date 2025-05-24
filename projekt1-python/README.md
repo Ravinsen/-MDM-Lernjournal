@@ -42,6 +42,7 @@ url = https://creativecommons.tankerkoenig.de/json/list.php?lat={lat}&lng={lng}&
 
 <img src="images/MongoDB.png" alt="MongoDB" style="max-width: 100%; height: auto;">
 ---
+
 ## Training
 
 ### Architekturüberblick
