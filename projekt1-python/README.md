@@ -41,7 +41,6 @@ url = https://creativecommons.tankerkoenig.de/json/list.php?lat={lat}&lng={lng}&
 <img src="images/datascrapping.png" alt="datascrapping" style="max-width: 100%; height: auto;">
 
 <img src="images/MongoDB.png" alt="MongoDB" style="max-width: 100%; height: auto;">
----
 
 ## Training
 
@@ -121,6 +120,8 @@ recommendation = {
 
 Die App aktualisiert sich automatisch täglich über GitHub Actions. Die Workflow-Datei `update_data.yml` liegt unter `.github/workflows`.
 
+<img src="images/githubactions.png" alt="githubactions" style="max-width: 100%; height: auto;">
+
 Der CRON-Zeitplan ist so konfiguriert, dass täglich um 04:00 Uhr UTC neue Daten geladen werden:
 
 ```txt
@@ -128,6 +129,7 @@ on:
   schedule:
     - cron: '0 4 * * *'
 ```
+
 
 **Wichtige Schritte im Workflow:**
 
