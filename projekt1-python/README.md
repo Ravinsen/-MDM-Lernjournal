@@ -118,18 +118,30 @@ recommendation = {
 ---
 ## ModelOps Automation
 
-Die App aktualisiert sich automatisch täglich über GitHub Actions. Die Workflow-Datei `update_data.yml` liegt unter `.github/workflows`.
+Die Anwendung aktualisiert sich täglich automatisch über **GitHub Actions**. Der Workflow liegt unter `.github/workflows/update_data.yml`.
 
-<img src="images/githubactions.png" alt="githubactions" style="max-width: 100%; height: auto;">
+### Zeitplan
+Der Job läuft jeden Tag um **04:00 UTC** (05:00 MEZ):
 
-Der CRON-Zeitplan ist so konfiguriert, dass täglich um 04:00 Uhr UTC neue Daten geladen werden:
-
-```txt
-on:
-  schedule:
-    - cron: '0 4 * * *'
+```yaml
+cron: '0 4 * * *'
 ```
 
+### Wichtige Schritte im Workflow
+
+1. Repository wird geklont (`actions/checkout@v3`)
+2. Python 3.10 Umgebung wird eingerichtet
+3. Alle benötigten Pakete werden über `requirements.txt` installiert
+4. Umgebungsvariablen (`MONGODB_URI`, `TANKERKOENIG_API_KEY`) werden aus GitHub Secrets geladen
+5. Das Skript `data/main.py` wird ausgeführt und speichert die aktuellen Kraftstoffdaten in MongoDB
+
+### Verwendete Secrets
+
+- `MONGODB_URI`: Verbindung zur MongoDB Atlas-Datenbank
+- `TANKERKOENIG_API_KEY`: Zugriff auf Echtzeitdaten der Tankerkönig-API
+
+<img src="images/githubactions.png" alt="githubactions" style="max-width: 100%; height: auto;">
+<img src="images/githubactionsI.png" alt="githubactionsI" style="max-width: 100%; height: auto;">
 
 **Wichtige Schritte im Workflow:**
 
