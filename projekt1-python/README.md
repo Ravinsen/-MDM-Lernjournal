@@ -46,7 +46,7 @@ Um die Performance der App zu verbessern, werden die Geo-Koordinaten der 20 deut
 
 <img src="images/caching.png" alt="caching" style="max-width: 100%; height: auto;">
 
-Um die Datenbankabfragen effizienter zu gestalten, wurden in MongoDB gezielt Indizes auf die Felder `ort`, `timestamp` und die drei Kraftstoffarten (`e5`, `e10`, `diesel`) gesetzt. Diese Felder werden bei nahezu jeder Abfrage verwendet, vorallem beim Filtern nach Stadt, Datum und Preisinformationen. Durch die Indexierung konnten die Lesezeiten signifikant reduziert und die Gesamtperformance der Anwendung verbessert werden. Das ist unteranderem sehr wichtig bei wachsendem Datenvolumen.
+Um die Performance während Datenbankabfragen noch mehr zu verbessern, wurden in MongoDB gezielt Indexe auf die Felder `ort`, `timestamp` und die drei Kraftstoffarten (`e5`, `e10`, `diesel`) gesetzt. Diese Felder werden bei nahezu jeder Abfrage verwendet, vorallem beim Filtern nach Stadt, Datum und Preisinformationen. Durch die Indexierung konnten die Lesezeiten signifikant reduziert und die Gesamtperformance der Anwendung verbessert werden. Das ist unteranderem sehr wichtig bei wachsendem Datenvolumen.
 
 <img src="images/indexierung.png" alt="indexierung" style="max-width: 100%; height: auto;">
 
