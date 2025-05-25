@@ -145,7 +145,17 @@ cron: '0 4 * * *'
 
 ## Deployment
 
-Die App wurde vollständig containerisiert mit Docker und auf Azure App Service for Containers deployed.
+Die App wurde vollständig containerisiert mit Docker und zunächst lokal zum Laufen gebracht:
+
+<img src="images/dockerlocal.png" alt="dockerlocal" style="max-width: 100%; height: auto;">
+
+<img src="images/localhost.png" alt="localhost" style="max-width: 100%; height: auto;">
+
+Nach es Lokal einwandfrei lief wurde das Ganze auf Azure App Service for Containers deployed.
+
+<img src="images/webappazure.png" alt="webappazure" style="max-width: 100%; height: auto;">
+
+<img src="images/webappdeployed.png" alt="webappdeployed" style="max-width: 100%; height: auto;">
 
 Dockerfile-Ausschnitt:
 ```
