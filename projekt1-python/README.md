@@ -32,20 +32,23 @@ Für das Projekt habe ich keine statischen Daten gescraped, sondern auf die **Ta
 python data/main.py
 ```
 
-Um die Performance der App zu verbessern, werden die Geo-Koordinaten der 20 deutschen Städte nicht bei jeder Abfrage neu ermittelt, sondern lokal gecacht. Beim ersten Zugriff wird die Koordinate über die geopy-Bibliothek via Nominatim-API abgefragt und anschliessend in der Datei `coords_cache.json` gespeichert. Bei späteren Zugriffen greift das Modell dann direkt auf diesen Cache zu, wodurch externe API-Requests entfallen und die Ladezeit deutlich sinkt.
-
-
-<img src="images/caching.png" alt="caching" style="max-width: 100%; height: auto;">
-
-
 Die API-URL für jede Stadt sieht so aus:
 
 ```txt
 url = https://creativecommons.tankerkoenig.de/json/list.php?lat={lat}&lng={lng}&rad=25&sort=dist&type=all&apikey={api_key}"
 ```
+
 <img src="images/datascrapping.png" alt="datascrapping" style="max-width: 100%; height: auto;">
 
 <img src="images/MongoDB.png" alt="MongoDB" style="max-width: 100%; height: auto;">
+
+Um die Performance der App zu verbessern, werden die Geo-Koordinaten der 20 deutschen Städte nicht bei jeder Abfrage neu ermittelt, sondern lokal gecacht. Beim ersten Zugriff wird die Koordinate über die geopy-Bibliothek via Nominatim-API abgefragt und anschliessend in der Datei `coords_cache.json` gespeichert. Bei späteren Zugriffen greift das Modell dann direkt auf diesen Cache zu, wodurch externe API-Requests entfallen und die Ladezeit deutlich sinkt.
+
+<img src="images/caching.png" alt="caching" style="max-width: 100%; height: auto;">
+
+Um die Datenbankabfragen effizienter zu gestalten, wurden in MongoDB gezielt Indizes auf die Felder `ort`, `timestamp` und die drei Kraftstoffarten (`e5`, `e10`, `diesel`) gesetzt. Diese Felder werden bei nahezu jeder Abfrage verwendet, vorallem beim Filtern nach Stadt, Datum und Preisinformationen. Durch die Indexierung konnten die Lesezeiten signifikant reduziert und die Gesamtperformance der Anwendung verbessert werden. Das ist unteranderem sehr wichtig bei wachsendem Datenvolumen.
+
+<img src="images/indexierung.png" alt="indexierung" style="max-width: 100%; height: auto;">
 
 ## Training
 
