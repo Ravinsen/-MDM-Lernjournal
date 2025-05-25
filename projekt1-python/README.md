@@ -178,7 +178,7 @@ docker push benzinpreisportal.azurecr.io/benzin-app:v1
 
 <img src="images/localhost.png" alt="localhost" style="max-width: 100%; height: auto;">
 
-Nachdem es Lokal einwandfrei lief wurde das Ganze auf Azure Cloud deployed. Dafür wurde über das Azure Interface eine Resourcengruppe, sowie ein App Service Plan und Webapp erstellt und deployed. Die Anwendung ist jetzt öffentlich über Azure erreichbar: https://benzin-app-bvg0dcb9c2cmgwcq.canadacentral-01.azurewebsites.net/
+Nachdem es Lokal einwandfrei lief, wurde das Ganze auf Azure Cloud deployed. Dafür wurde über das Azure Interface eine Resourcengruppe, sowie ein App Service Plan und Webapp erstellt und deployed. Die Anwendung ist jetzt öffentlich über Azure erreichbar: https://benzin-app-bvg0dcb9c2cmgwcq.canadacentral-01.azurewebsites.net/
 
 <img src="images/webappazure.png" alt="webappazure" style="max-width: 100%; height: auto;">
 
