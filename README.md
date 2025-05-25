@@ -1,4 +1,4 @@
-﻿# MDM-Lernjournal <Ravinsen>
+﻿# MDM-Lernjournal <`Ravinsen`>
 
 ## Inhalt
 
