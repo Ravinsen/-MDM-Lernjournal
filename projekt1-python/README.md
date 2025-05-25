@@ -32,6 +32,11 @@ Für das Projekt habe ich keine statischen Daten gescraped, sondern auf die **Ta
 python data/main.py
 ```
 
+Um die Performance der App zu verbessern, werden die Geo-Koordinaten der 20 deutschen Städte nicht bei jeder Abfrage neu ermittelt, sondern lokal gecacht. Beim ersten Zugriff wird die Koordinate über die geopy-Bibliothek via Nominatim-API abgefragt und anschliessend in der Datei `coords_cache.json` gespeichert. Bei späteren Zugriffen greift das Modell dann direkt auf diesen Cache zu, wodurch externe API-Requests entfallen und die Ladezeit deutlich sinkt.
+
+
+<img src="images/caching.png" alt="caching" style="max-width: 100%; height: auto;">
+
 
 Die API-URL für jede Stadt sieht so aus:
 
