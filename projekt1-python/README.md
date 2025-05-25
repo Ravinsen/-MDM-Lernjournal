@@ -145,17 +145,7 @@ cron: '0 4 * * *'
 
 ## Deployment
 
-Die App wurde vollständig containerisiert mit Docker und zunächst lokal zum Laufen gebracht:
-
-<img src="images/dockerlocal.png" alt="dockerlocal" style="max-width: 100%; height: auto;">
-
-<img src="images/localhost.png" alt="localhost" style="max-width: 100%; height: auto;">
-
-Nach es Lokal einwandfrei lief wurde das Ganze auf Azure App Service for Containers deployed.
-
-<img src="images/webappazure.png" alt="webappazure" style="max-width: 100%; height: auto;">
-
-<img src="images/webappdeployed.png" alt="webappdeployed" style="max-width: 100%; height: auto;">
+Die App wurde vollständig containerisiert mit Docker und zunächst lokal zum Laufen gebracht.
 
 Dockerfile-Ausschnitt:
 ```
@@ -175,6 +165,18 @@ docker build -t benzin-app:v1 .
 docker tag benzin-app:v1 benzinpreisportal.azurecr.io/benzin-app:v1
 docker push benzinpreisportal.azurecr.io/benzin-app:v1
 ```
+
+<img src="images/dockerlocal.png" alt="dockerlocal" style="max-width: 100%; height: auto;">
+
+<img src="images/localhost.png" alt="localhost" style="max-width: 100%; height: auto;">
+
+Nachdem es Lokal einwandfrei lief wurde das Ganze auf Azure Cloud deployed. Dafür wurde über das Azure Interface eine Resourcengruppe, sowie ein App Service Plan und Webapp erstellt und deployed. Die Anwendung ist jetzt öffentlich über Azure erreichbar: https://benzin-app-bvg0dcb9c2cmgwcq.canadacentral-01.azurewebsites.net/
+
+<img src="images/webappazure.png" alt="webappazure" style="max-width: 100%; height: auto;">
+
+<img src="images/webappdeployed.png" alt="webappdeployed" style="max-width: 100%; height: auto;">
+
+
 
 Anschliessend wurde das Image in Azure Web App verlinkt. Die Anwendung läuft öffentlich unter einer benutzerdefinierten Subdomain.
 
